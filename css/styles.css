@@ -86,9 +86,18 @@ header, nav, main, section, footer {
 
 /* Header + footer */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #ffffff;
   border: 1px solid #dddddd;
-  padding: 16px;
+  padding: 16px 24px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #72348c;  
 }
 
 footer {
@@ -103,6 +112,8 @@ footer {
    Navigation
    =================== */
 nav ul {
+  display: flex;
+  gap: 24px;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -114,11 +125,17 @@ nav li {
 }
 
 nav a {
+  color: #2c5f2d;
+  text-decoration: none;
   font-weight: bold;
-  padding: 8px;
+  padding: 8px 12px;
 }
 
-nav a:hover,
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
 nav a:focus {
   background-color: #e8f0e8;
 }
@@ -145,4 +162,35 @@ button {
 button:hover,
 button:focus {
   background-color: #72348c ;
+}
+
+/* Card Section */
+.card-section {
+  padding: 40px 20px;
+}
+
+.card-section h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual Cards */
+.card {
+  flex: 1 1 280px;
+  padding: 20px;
+  background-color: #ffffff;  /* Change to your card color */
+  border: 1px solid #2c5f2d;      /* Change border style */
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #72348c;  /* Change to your heading color */
 }
