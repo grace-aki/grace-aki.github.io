@@ -153,6 +153,7 @@ footer {
 }
 
 .credits li {
+  list-style: none;
   margin-bottom: 4px;
 }
 
@@ -375,4 +376,5 @@ input, textarea {
     margin: 0 auto;               
     padding: 40px 20px;
   }
+
 }
