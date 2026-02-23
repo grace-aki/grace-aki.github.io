@@ -1,6 +1,13 @@
 /* ===================
-   Color Scheme
+   Comments
    ===================
+   
+   MOBILE-FIRST APPROACH:
+   - Base styles = mobile (smallest screens)
+   - @media (min-width: 768px) = tablet and up
+   - @media (min-width: 1024px) = desktop and up
+
+   COLORS:
    Primary: #2c5f2d 
    Accent: #72348c
    Primary hover: #72348c 
@@ -10,14 +17,22 @@
    Border:  #dddddd
 */
 
+/* ===================
+   Reset & Base Styles
+   =================== */
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;                
+    height: auto;  
     }
 
 body {
@@ -29,6 +44,10 @@ body {
   margin: 0;
   padding: 16px;
 }
+
+/* ===== Mobile Base Styles (all screens) ===== */
+
+
 
 /* ===================
    Typography
@@ -75,6 +94,8 @@ a:hover,
 a:focus {
   color: #72348c;
   text-decoration: underline;
+  background-color: #F9F9F7;
+
 }
 
 /* ===================
@@ -87,11 +108,21 @@ header, nav, main, section, footer {
 /* Header + footer */
 header {
   display: flex;
+  flex-direction: column;           
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   padding: 16px 24px;
+  gap: 12px;                      
+
+}
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .site-title {
@@ -103,9 +134,30 @@ header {
 footer {
   background-color: #ffffff;
   border-top: 2px solid #2c5f2d;
-  padding: 16px;
+  padding: 20px;
   color: #555555;
   font-size: 14px;
+  text-align: center;
+
+}
+
+/* Credits styling for attribution links */
+.credits {
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.credits ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.credits li {
+  margin-bottom: 4px;
+}
+
+.credits a {
+  color: #2c5f2d;                    
 }
 
 /* ===================
@@ -113,6 +165,8 @@ footer {
    =================== */
 nav ul {
   display: flex;
+  flex-wrap: wrap;                
+  justify-content: center;          
   gap: 24px;
   list-style: none;
   padding-left: 0;
@@ -132,12 +186,36 @@ nav a {
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #e8f0e8;
   border-radius: 4px;
 }
 
 nav a:focus {
   background-color: #e8f0e8;
+}
+
+/* Hero: shorter on mobile */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;               
+  background-color: #ffffff;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;                
+  color: #2c5f2d;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
 
 /* contact page */
@@ -152,16 +230,32 @@ input, textarea {
   border: 1px solid #dddddd;
 }
 
-button {
+.button {
+  display: inline-block;
   background-color: #2c5f2d;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 2px 24px;
+  text-decoration: none;
   border: 1px solid #2c5f2d;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
   background-color: #72348c ;
+}
+
+/* Featured section */
+.featured {
+  padding: 32px 16px;
+}
+
+.featured h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2c5f2d;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 /* Card Section */
@@ -177,20 +271,108 @@ button:focus {
 /* Card Container */
 .card-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: column;
+  flex-direction: column;
   gap: 20px;
 }
 
 /* Individual Cards */
 .card {
   flex: 1 1 280px;
-  padding: 20px;
-  background-color: #ffffff;  /* Change to your card color */
-  border: 1px solid #2c5f2d;      /* Change border style */
+  padding: 16px;
+  background-color: #ffffff;  
+  border: 1px solid #2c5f2d;      
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;              
+  border-radius: 4px;
 }
 
 .card h3 {
-  margin-bottom: 8px;
-  color: #72348c;  /* Change to your heading color */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #72348c; 
+  margin: 12px 0 8px;
+}
+
+.card .price {
+  color: #2c5f2d;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* ===== Tablet (768px and up) ===== */
+
+@media (min-width: 768px) {
+
+  /* Header: side-by-side on tablet */
+  header {
+    flex-direction: row;         
+    justify-content: space-between;        
+    padding: 16px 24px;
+  }
+
+  /* Nav: more spacing on tablet */
+  nav ul {
+    gap: 16px;                    
+  }
+
+  /* Hero: taller on tablet */
+  .hero {
+    min-height: 50vh;             
+    padding: 40px 24px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;              
+  }
+
+  /* Cards: side-by-side on tablet */
+  .card-container {
+    flex-direction: row;         
+    flex-wrap: wrap;              
+  }
+
+  .card {
+    flex: 1 1 280px;           
+  }
+
+  .featured {
+    padding: 40px 24px;
+  }
+}
+
+/* ===== Desktop (1024px and up) ===== */
+
+@media (min-width: 1024px) {
+
+  /* Nav: widest spacing on desktop */
+  nav ul {
+    gap: 24px;                    
+  }
+
+  /* Hero: tallest on desktop */
+  .hero {
+    min-height: 60vh;             
+  }
+
+  .hero h1 {
+    font-size: 3rem;              
+  }
+
+  .hero p {
+    font-size: 1.25rem;              
+  }
+
+  /* Limit content width on big screens */
+  .featured {
+    max-width: 1200px;              
+    margin: 0 auto;               
+    padding: 40px 20px;
+  }
 }
