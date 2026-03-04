@@ -4,26 +4,73 @@
   <link rel="stylesheet" href="/css/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌱 Contact | Kalo: Heart of Hawaiʻi 💜 </title>
+  <title>🌱 Contact | Kalo: Heart of Hawaiʻi 💜</title>
+  
+  <!-- CSS -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;                
+      height: auto;  
+      float: right;
+      margin: 10px;
+    }
+
+    input[type="checkbox"] {
+      width: auto;        
+      margin: 0 5px 0 0;    
+      vertical-align: middle; 
+    }
+
+    label {
+      display: inline-block; 
+      margin-right: 15px;     
+      vertical-align: middle; 
+    }
+  </style>
 </head>
+
 <body>
   <header>
-      <h1>Contact</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="cultivate.html">Cultivation</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <h1>Contact</h1>
+    
+    <!-- Main navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="cultivate.html">Cultivation</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <form action="https://formspree.io/f/xykpqakg" method="POST">
+    <h2>Need More Information?</h2>
     
-    <fieldset>
+    <!-- Introduction -->
+    <p>Are you interested in volunteering at a <em>loʻi</em> but not sure where to start? The organizations listed on the <a href="resources.html">Resources</a> page are great places to begin, but I am also happy to assist others in connecting to volunteer opportunities around them or sharing my own experiences in the <em>loʻi</em>. Please note: I am not officially affiliated with any of the organizations listed on this site. For specific questions about volunteer projects, you will need to contact the organization directly. Use the form below to reach us with questions, comments, or inquiries related to <em>kalo</em> and this website.<br> 
+    <em><strong>Mahalo!</strong></em></p>
+      
+    <!-- Contact form -->
+    <form action="https://formspree.io/f/xykpqakg" method="POST">
+  
+      
+      <img src="images/man-on-phone.jpg"
+           alt="Man on the phone sitting in a green loʻi (taro patch)"
+           width="300">
+
+      <!-- Contact information section -->
+      <fieldset>
         <legend>Contact Information</legend>
       
         <label for="name">Full Name:</label>
@@ -33,43 +80,65 @@
         <input type="email" id="email" name="email" required>
       </fieldset>
 
+      <!-- User interests section -->
       <fieldset>
         <legend>Additional Details</legend>
 
         <label for="interest">What interests you most about Kalo?</label>
-          <br>
-          <input type="checkbox" id="history" name="interests" value="history">
-          <label for="history">Cultural History</label>
-          <input type="checkbox" id="growing" name="interests" value="growing">
-          <label for="growing">Growing</label>
-          <input type="checkbox" id="volunteer" name="interests" value="volunteer">
-          <label for="volunteer">Volunteering</label>
-          
-        </select>
-
+        <br>
+        
+        <!-- Checkbox for interests -->
+        <input type="checkbox" id="history" name="interests" value="history">
+        <label for="history">Cultural History</label>
+        
+        <input type="checkbox" id="growing" name="interests" value="growing">
+        <label for="growing">Growing</label>
+        
+        <input type="checkbox" id="volunteer" name="interests" value="volunteer">
+        <label for="volunteer">Volunteering</label>
       </fieldset>
+
+      <!-- Text and newsletter signup -->
       <fieldset>
         <legend>Other</legend>
         
         <label for="details">Your message:</label><br>
         <textarea id="details" name="details" rows="4"></textarea>
-        <br>
+        
+        <!-- Newsletter opt-in checkbox -->
         <input type="checkbox" id="newsletter" name="newsletter">
         <label for="newsletter">Include me in Kalo: Heart of Hawaii's newsletter</label>
       </fieldset>
-        <p>Mahalo for your interest! We'll be in touch!</p>
-        <p>Privacy notice: We never share your information with third parties.</p>
-        <button type="submit">Submit</button>
-    </form>
+      
+      <br>
+      
+      <!-- Submit -->
+      <p>Mahalo for your interest! We'll be in touch!</p>
+      <p><strong>Privacy notice</strong>: We never share your information with third parties.</p>
+      <button type="submit">Submit</button>
+    </form>    
   </main>
 
   <footer>
-      <p>
-        © 2026 Kalo: Heart of Hawai'i
-      </p>
-      <address>
-        53-270 Kamehameha Highway, Hau'ula, HI 96717
-      </address>
+    <p>© 2026 Kalo: Heart of Hawaiʻi</p>
+
+    <address>
+      53-270 Kamehameha Highway, Hauʻula, HI 96717
+    </address>
+
+    <br><p><i>Please report any errors. This website is a work in progress and your feedback helps make it better.</i></p>
+      
+    <!-- Image credit attribution -->    
+    <div class="credits">
+      <p>Photo Credits:</p>
+      <ul>
+        <li>
+          Man on phone: Photo by
+          <a href="https://unsplash.com/@nmv_0317" target="_blank" rel="noopener noreferrer">Nem Malosi</a>
+          on <a href="https://unsplash.com/photos/a-man-sitting-on-a-rock-AZdlELxJTtk" target="_blank" rel="noopener noreferrer">Unsplash</a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
