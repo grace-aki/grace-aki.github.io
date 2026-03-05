@@ -1,48 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- HEADER & NAVIGATION -->
 <head>
   <link rel="stylesheet" href="/css/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🌱 Contact | Kalo: Heart of Hawaiʻi 💜</title>
-  
-  <!-- CSS -->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;                
-      height: auto;  
-      float: right;
-      margin: 10px;
-    }
-
-    input[type="checkbox"] {
-      width: auto;        
-      margin: 0 5px 0 0;    
-      vertical-align: middle; 
-    }
-
-    label {
-      display: inline-block; 
-      margin-right: 15px;     
-      vertical-align: middle; 
-    }
-  </style>
 </head>
 
 <body>
   <header>
     <h1>Contact</h1>
     
-    <!-- Main navigation -->
+    <!-- MAIN NAVIGATION -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -54,6 +25,7 @@
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
     <h2>Need More Information?</h2>
     
@@ -61,15 +33,15 @@
     <p>Are you interested in volunteering at a <em>loʻi</em> but not sure where to start? The organizations listed on the <a href="resources.html">Resources</a> page are great places to begin, but I am also happy to assist others in connecting to volunteer opportunities around them or sharing my own experiences in the <em>loʻi</em>. Please note: I am not officially affiliated with any of the organizations listed on this site. For specific questions about volunteer projects, you will need to contact the organization directly. Use the form below to reach us with questions, comments, or inquiries related to <em>kalo</em> and this website.<br> 
     <em><strong>Mahalo!</strong></em></p>
       
-    <!-- Contact form -->
+    <!-- Contact Form -->
     <form action="https://formspree.io/f/xykpqakg" method="POST">
   
-      
       <img src="images/man-on-phone.jpg"
            alt="Man on the phone sitting in a green loʻi (taro patch)"
-           width="300">
+           width="300"
+           class="float-right-mini">
 
-      <!-- Contact information section -->
+      <!-- Contact Information Section -->
       <fieldset>
         <legend>Contact Information</legend>
       
@@ -80,14 +52,13 @@
         <input type="email" id="email" name="email" required>
       </fieldset>
 
-      <!-- User interests section -->
+      <!-- User Interests Section -->
       <fieldset>
         <legend>Additional Details</legend>
 
-        <label for="interest">What interests you most about Kalo?</label>
-        <br>
+        <legend>What interests you most about Kalo?</legend>
         
-        <!-- Checkbox for interests -->
+        <!-- Checkbox For Interests -->
         <input type="checkbox" id="history" name="interests" value="history">
         <label for="history">Cultural History</label>
         
@@ -98,37 +69,40 @@
         <label for="volunteer">Volunteering</label>
       </fieldset>
 
-      <!-- Text and newsletter signup -->
+      <!-- Text and Newsletter Signup -->
       <fieldset>
         <legend>Other</legend>
         
         <label for="details">Your message:</label><br>
         <textarea id="details" name="details" rows="4"></textarea>
         
-        <!-- Newsletter opt-in checkbox -->
+        <!-- Newsletter Opt-in Checkbox -->
         <input type="checkbox" id="newsletter" name="newsletter">
         <label for="newsletter">Include me in Kalo: Heart of Hawaii's newsletter</label>
       </fieldset>
       
       <br>
       
-      <!-- Submit -->
+      <!-- Submit Button-->
       <p>Mahalo for your interest! We'll be in touch!</p>
       <p><strong>Privacy notice</strong>: We never share your information with third parties.</p>
       <button type="submit">Submit</button>
-    </form>    
+    </form>
   </main>
 
+<!-- FOOTER -->
   <footer>
     <p>© 2026 Kalo: Heart of Hawaiʻi</p>
+
 
     <address>
       53-270 Kamehameha Highway, Hauʻula, HI 96717
     </address>
-
-    <br><p><i>Please report any errors. This website is a work in progress and your feedback helps make it better.</i></p>
-      
-    <!-- Image credit attribution -->    
+    
+    <br>
+    <p><a href="accessibility.html">Accessibility Statement</a></p>
+    
+    <!-- Image Credit Attribution -->    
     <div class="credits">
       <p>Photo Credits:</p>
       <ul>
