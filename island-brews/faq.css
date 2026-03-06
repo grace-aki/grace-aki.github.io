@@ -1,0 +1,231 @@
+/* ===================
+   Island Brews FAQ Styles
+   ===================
+
+   Colors you'll need:
+   - Coffee Brown: #5D4037
+   - Light Brown: #8D6E63
+   - Tropical Orange: #C65500
+   - Dark Roast: #3E2723
+   - Cream: #FFFAF0
+   - Light Peach: #FFF3E0
+   - Warm Gray: #D7CCC8
+   - Light Gray: #EFEBE9
+
+   Dark Mode colors:
+   - Dark Background: #3E2723
+   - Dark Alt Background: #4E342E
+   - Dark Text: #EFEBE9
+   - Dark Border: #5D4037
+   - Dark Primary: #BCAAA4
+   - Dark Accent: #FFB74D
+*/
+
+/* ===================
+   Reset & Base Styles
+   =================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3E2723;
+  background-color: #FFFAF0;
+}
+
+/* ===================
+   Header & Navigation
+   (reusing styles from homepage)
+   =================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5D4037;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFAF0;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav a {
+  color: #FFFAF0;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  color: #8D6E63;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* ===================
+   Footer
+   =================== */
+
+footer {
+  background-color: #5D4037;
+  color: #FFFAF0;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===================
+   FAQ Section Layout
+   =================== */
+
+.faq {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.faq h2 {
+  font-family: Georgia, serif;
+  color: #5D4037;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.faq-item {
+  margin-bottom: 8px;
+}
+
+/* ===================
+   PART 2: FAQ Styling
+   =================== */
+
+/* Step 1: Style the FAQ question buttons */
+.faq-question {
+  width: 100%;                  /* Use 100% to span full width */
+  text-align: left;             /* Use "left" so text aligns left */
+  padding: 16px;                /* Use 16px */
+  font-size: 1.1rem;            /* Use 1.1rem */
+  font-weight: bold;            /* Use "bold" */
+  color: #5D4037;             /* Use coffee brown: #5D4037 */
+  background: #FFF3E0;        /* Use light peach: #FFF3E0 */
+  border: 1px solid #D7CCC8;  /* Use 1px solid #D7CCC8 */
+  cursor: pointer;              /* Use "pointer" for clickable hand icon */
+}
+
+/* Step 2: Add hover effect for questions */
+.faq-question:hover {
+  background: #D7CCC8;             /* Use warm gray: #D7CCC8 */
+}
+
+/* Step 3: Style the FAQ answers */
+.faq-answer {
+  padding: 16px;               /* Use 16px */
+  background: #FFFAF0;       /* Use cream: #FFFAF0 */
+  border: 1px solid #D7CCC8; /* Use 1px solid #D7CCC8 */
+  border-top: none;             /* Use "none" (removes double border) */
+}
+
+/* Step 4: Hide answers that have the hidden attribute */
+/* This is CRITICAL - without it, answers won't hide! */
+.faq-answer[hidden] {
+  display: none;                /* Use "none" */
+}
+
+/* ===================
+   PART 3: Theme Toggle Button Styling
+   =================== */
+
+/* Step 2: Style the toggle button */
+.theme-toggle {
+  background: #5D4037;       /* Use coffee brown: #5D4037 */
+  color: white;              /* Use "white" */
+  border: none;                /* Use "none" */
+  padding: 8px 16px;           /* Use 8px (top/bottom) 16px (left/right) */
+  border-radius: 4px;          /* Use 4px */
+  cursor: pointer;             /* Use "pointer" for clickable hand icon */
+}
+
+.theme-toggle:hover {
+  background: #8D6E63;       /* Use light brown: #8D6E63 */
+}
+
+/* ===================
+   PART 4: Dark Mode Overrides
+   =================== */
+
+/* When the body has class "dark-mode", override all the colors! */
+/* The JavaScript adds/removes this class when you click the toggle */
+
+/* Step 1: Dark mode body */
+body.dark-mode {
+  background-color: #3E2723; /* Use dark background: #3E2723 */
+  color: #EFEBE9;            /* Use dark text: #EFEBE9 */
+}
+
+/* Step 2: Dark mode header */
+body.dark-mode header {
+  background-color: #4E342E;  /* Use dark alt background: #4E342E */
+}
+
+/* Step 3: Dark mode navigation links */
+body.dark-mode nav a {
+  color: #EFEBE9;                  /* Use dark text: #EFEBE9 */
+}
+
+body.dark-mode nav a:hover {
+  color: #FFB74D;                  /* Use dark accent: #FFB74D */
+}
+
+/* Step 4: Dark mode headings */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #BCAAA4;                  /* Use dark primary: #BCAAA4 */
+}
+
+/* Step 5: Dark mode FAQ questions */
+body.dark-mode .faq-question {
+  background: #4E342E;       /* Use dark alt background: #4E342E */
+  color: #EFEBE9;                  /* Use dark text: #EFEBE9 */
+  border-color: #5D4037;           /* Use dark border: #5D4037 */
+}
+
+body.dark-mode .faq-question:hover {
+  background: #5D4037;             /* Use dark border: #5D4037 */
+}
+
+/* Step 6: Dark mode FAQ answers */
+body.dark-mode .faq-answer {
+  background: #3E2723;             /* Use dark background: #3E2723 */
+  color: #EFEBE9;                  /* Use dark text: #EFEBE9 */
+  border-color: #5D4037;           /* Use dark border: #5D4037 */
+}
+
+/* Step 7: Dark mode toggle button */
+body.dark-mode .theme-toggle {
+  background: #BCAAA4;             /* Use dark primary: #BCAAA4 */
+  color: #3E2723;                  /* Use dark background: #3E2723 */
+}
+
+body.dark-mode .theme-toggle:hover {
+  background: #D7CCC8;             /* Use warm gray: #D7CCC8 */
+}
+
+/* Step 8: Dark mode footer */
+body.dark-mode footer {
+  background-color: #4E342E;       /* Use dark alt background: #4E342E */
+}
